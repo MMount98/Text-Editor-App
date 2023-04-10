@@ -16,35 +16,35 @@ const initdb = async () =>
 export const putDb = async (content) => {
   console.log("Post to the Database");
 
-  // const jateDb = await openDB("jate", 1);
+  const jateDb = await openDB("jate", 1);
 
-  // const tx = jateDb.transaction("jate", "readwrite");
+  const tx = jateDb.transaction("jate", "readwrite");
 
-  // const store = tx.objectStore("jate");
+  const store = tx.objectStore("jate");
 
-  // const request = store.put({ value: content });
+  const request = store.put({ value: content });
 
-  // const result = await request;
-  // console.log("Line was saved to the database", result);
+  const result = await request;
+  console.log("Line was saved to the database", result);
 };
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   console.log("GET all from Database");
 
-  // const jateDb = await openDB("jate", 1);
+  const jateDb = await openDB("jate", 1);
 
-  // const tx = jateDb.transaction("jate", "readonly");
+  const tx = jateDb.transaction("jate", "readonly");
 
-  // const store = tx.objectStore("jate");
+  const store = tx.objectStore("jate");
 
-  // const request = store.getAll();
+  const request = store.getAll();
 
-  // const result = await request;
+  const result = await request;
 
-  // console.log("result.vaule", result);
+  console.log("result.vaule", result);
 
-  // return result.value;
+  return result.value;
 };
 
 initdb();
