@@ -30,6 +30,7 @@ module.exports = () => {
         swDest: "src-sw.js",
       }),
       new WebpackPwaManifest({
+        fingerprints: false,
         name: "JATE",
         short_name: "JATE",
         description: "This is a online Text Editor",
